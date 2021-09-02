@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Point</title>
+
+
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-2">
+                <h1 class="animate__animated animate__zoomIn">Page 1</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-2">
+                <h1 class="wow animate__zoomIn">Page 2</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid vh-100 bg-primary" id="three">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-2">
+                <h1 class="wow animate__zoomIn">Page 3</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid vh-100" id="four">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-2">
+                <h1 class="wow animate__zoomIn">Page 4</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script src="vendor/way_point/noframework.waypoints.min.js"></script>
+    <script src="vendor/way_point/jquery.waypoints.min.js"></script>
+
+    <script>
+        wow = new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animate__animated', // default
+            offset: 0, // default
+            mobile: true, // default
+            live: true // default
+        })
+        wow.init();
+
+        // let wayPointThirdSection = $("#three").waypoint((direction)=>{
+        //    if(direction == "down"){
+        //        $(".navbar").removeClass("bg-primary")
+        //        $(".navbar").addClass("bg-success")
+        //    }else{
+        //     $(".navbar").removeClass("bg-success")
+        //        $(".navbar").addClass("bg-primary")
+        //    }
+        // },{
+        //     offset : "10%"
+        // })
+         let wayPointThirdSection = $("#three").waypoint(()=>{
+                $(".navbar").toggleClass("bg-primary").toggleClass("bg-success")
+        },{
+            offset : "10%"
+        })
+
+        
+        // let wayPointFourthSection = $("#four").waypoint((direction)=>{
+        //    if(direction == "down"){
+        //     $(".navbar").removeClass("bg-success")
+        //        $(".navbar").addClass("bg-primary")
+              
+        //    }else{
+        //     $(".navbar").removeClass("bg-primary")
+        //        $(".navbar").addClass("bg-success")
+        //    }
+        // },{
+        //     offset : "10%"
+        // })
+        let wayPointFourthSection = $("#four").waypoint((direction)=>{
+            $(".navbar").toggleClass("bg-success").toggleClass("bg-primary")
+        },{
+            offset : "10%"
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venobox</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="vendor/venobox/venobox.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-columns mt-3">
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery" href="images/poe-portrait-1.jpg">
+                            <img src="images/poe-landscape-1.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+    
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery" href="images/poe-portrait-2.jpg">
+                            <img src="images/poe-landscape-2.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+    
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery" href="images/poe-portrait-3.jpg">
+                            <img src="images/poe-landscape-3.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+    
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery-one" href="images/poe-portrait-4.jpg">
+                            <img src="images/poe-landscape-4.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+    
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery-one" href="images/poe-portrait-5.jpg">
+                            <img src="images/poe-landscape-5.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+    
+                    <div class="">
+                        <a class="venobox" data-gall="myGallery-one" href="images/poe-portrait-6.jpg">
+                            <img src="images/poe-landscape-6.jpg" class="img-fluid" alt="image alt" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/venobox/venobox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.venobox').venobox({
+                framewidth: '400px', // default: ''
+                frameheight: 'auto', // default: ''
+                border: '3px', // default: '0'
+                bgcolor: '#f5f5f5', // default: '#fff'
+                titleattr: 'data-title', // default: 'title'
+                numeratio: true, // default: false
+                infinigall: true, // default: false
+                share: ['facebook', 'twitter', 'download'] // default: []
+            });
+        });
+    </script>
+
+</body>
+
+</html>
